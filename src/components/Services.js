@@ -2,16 +2,16 @@ import React from "react";
 
 const Services=()=>{
     return(
-        <div className="servicesCtn">
-            <p style={{"color":"white","font-family":"Montserrat","letter-spacing": "0.1em",
-                "font-weight":"900","font-size":"30px","text-transform":"uppercase","padding-top":"30px","padding-bottom":"10px"}}>
-                Наши услуги</p>
-            <div className="services">
+        <div id="services" className="servicesCtn">
+            <h3 style={{"color":"white","font-family":"Rubik","letter-spacing": "0.1em",
+                "font-weight":"800","font-size":"30px","text-transform":"uppercase","padding-top":"30px","padding-bottom":"10px"}}>
+                Наши услуги</h3>
+            <div className="services container">
                 <div className="serviceItem">
                     <img src="../resources/cars/car_2.jpg"/>
                     <p >Мойка кузова <br></br>автомобиля</p>
                 </div>
-                <div className="serviceItem" style={{'margin-left':"20px","margin-right":"20px"}}>
+                <div className="serviceItem" >
                     <img src="../resources/cars/car_3.jpg"/>
                     <p >Профессиональная <br></br> полировка</p>
                 </div>

@@ -19,9 +19,9 @@ function Form(){
         setPhone(value)
     }
     return(
-        <div className="formCtn">
-            <p style={{"font-family":"Rubik","font-weight":"900","font-size":"18px","color":"black",
-                "text-transform":"uppercase"}}>Оставьте ваши контакты</p>
+        <div id="form" className="formCtn">
+            <h3 style={{"font-family":"Rubik","font-weight":"900","color":"black",
+                "text-transform":"uppercase"}}>Оставьте ваши контакты</h3>
             <form className="formApply" onSubmit={handleSubmit}>
                 <br></br>
                 <input
@@ -32,6 +32,7 @@ function Form(){
                     type="text"
                     required></input>
                 <PhoneInput
+                    id="phoneInput"
                     name="phone"
                     placeholder="Номер телефона"
                     country={'ru'}
@@ -51,10 +52,10 @@ function Form(){
                         "padding-left":"10px",
                         "border":"none",
                         "box-shadow": "0px 6px 50px 4px rgba(0, 0, 0, 0.1)"
-
                     }}
                     containerStyle={{
-                        "font-family":"Montserrat"
+                        "font-family":"Montserrat",
+                        "width":"310px"
 
                     }}
                     required

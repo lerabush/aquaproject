@@ -1,42 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik:wght@400;700;800;900&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 .App {
     text-align: center;
 }
-html{
-    background-color: #f1f6f8
+
+html {
+    background-color: #f1f6f8;
+    scroll-behavior: smooth;
 }
 
+.container {
+    max-width: 1140px;
+}
+
+
 /*HEADER ELEMENTS*/
+
 .header {
     background-color: #0B1049;
     color: white;
     font-family: "Montserrat Alternates";
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all .3s ease;
+    z-index: 10;
+    margin: 0 auto;
+
 }
-.flag-dropdown{
+
+
+
+.image-gallery {
+    margin: 20px auto 40px;
+}
+
+
+.flag-dropdown {
     visibility: hidden;
 }
 
 
 .navbar {
     display: flex;
-    flex-direction: row;
     align-content: center;
-    margin-left: 100px;
-}
-
-.navbar p {
-    margin-right: 40px;
+    justify-content: space-between;
+    margin-left: 400px;
     font-size: 14px;
-    margin-bottom: 0;
-
 }
+
+.navbar a {
+    margin: 0 30px 0 0;
+    text-decoration: none;
+    color:white;
+}
+
+.navbar a:visited {
+    color: white;
+}
+
 
 .carwashLogo {
     height: 50px;
@@ -51,7 +79,7 @@ html{
 /*ABOUT ELEMENTS*/
 .aboutPhoto {
     height: 300px;
-    box-shadow: -30px 50px 50px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: -30px 50px 30px 5px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     margin-bottom: -40px;
 }
@@ -59,30 +87,38 @@ html{
 .aboutText {
     font-family: Rubik;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 36px;
     text-align: left;
-    margin-right: 70px;
+    margin-right: 35px;
 
 }
 
-.about {
-    display: flex;
-    padding-top: 70px;
-    justify-content: space-around;
-    padding-left: 150px;
-    padding-right: 150px;
+.aboutText h3 {
+    font-weight: 800;
+}
+
+.about-1 {
+
     background-color: #D5EEF9;
+}
+
+.about {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 170px 50px 0;
 }
 
 
 #oneAbout {
-    margin-top: 0;
-    margin-bottom: -20px;
+
+    margin: 0 0 -20px;
 }
 
 .about-2 {
-    margin-top: 60px;
+    margin: 60px auto 0;
+
 }
 
 .aboutIcon {
@@ -97,24 +133,21 @@ html{
 .row-1 {
     display: flex;
     justify-content: space-around;
-    padding-right: 160px;
-    padding-left: 160px;
-    margin-bottom: 20px;
+    margin: 100px 0 20px;
 }
+
 
 .row-2 {
     display: flex;
     justify-content: space-around;
-    padding-right: 280px;
-    padding-left: 280px;
+
+    padding: 0 150px;
 }
 
+/*SERVICES*/
 .servicesCtn {
     background-color: #0B1049;
     margin-top: 40px;
-}
-
-.serviceItem {
 }
 
 .serviceItem img {
@@ -133,8 +166,8 @@ html{
 .services {
     display: flex;
     justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
+
+    margin: 0 auto;
     padding-bottom: 30px;
     border-bottom: thin solid white;
 }
@@ -149,138 +182,142 @@ html{
     padding-bottom: 30px;
 
 }
-#photosName{
+
+/*PHOTOS*/
+#photosName {
     font-family: Rubik;
     font-size: 30px;
     color: black;
     text-transform: uppercase;
     font-weight: 900;
 }
-.photos{
-    margin-top:40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-right: 120px;
-    padding-left: 120px;
-    grid-row-gap:30px;
-    grid-column-gap:30px ;
-    justify-items: center;
+
+.photos {
+    margin-top: 40px;
+    padding: 0 120px;
 
 }
-.photos img{
-    height:200px;
-}
-.morePhoto{
-    margin-top:50px;
-    margin-bottom: 25px;
-    background-color: #8CC9EB ;
-    border:none;
-    height:40px;
-    width:150px;
-    font-family: Montserrat;
-    font-weight: 700;
-    border-radius: 60px;
-    box-shadow: 0px 4px 35px 2px rgba(44, 99, 111, 0.6);
 
+.photos img {
+    height: 200px;
+}
 
+.image-gallery {
+    width: 700px;
 }
-.morePhoto:checked{
-    background-color: #195678;
-}
-.morePhoto:hover{
-    cursor: pointer;
-    box-shadow: 0px 4px 50px 10px rgba(58, 149, 169, 0.6);
 
-}
-.active1{
-    background-color: #4C98C2;
-    color: white;
-}
-.active2{
-    background-color: #195678;
-}
-.welcomeCtn{
+.welcomeCtn {
     background-color: #0B1049;
 }
-.welcome{
+
+.welcome {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 30px 130px 60px;
 }
-.formCtn{
-    background-color:#D5EEF9;
-    width:450px;
+
+.welcome p {
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+}
+
+.welcome #first {
+    font-family: Rubik;
+    font-weight: 900;
+    font-size : 24px;
+}
+.welcome #second {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size : 14px;
+}
+
+
+/*FORM*/
+.formCtn {
+    background-color: #D5EEF9;
+    width: 450px;
     border-radius: 5px;
     margin: -50px auto 40px;
 }
-.formApply{
+.formCtn h3{
+    font-size: 18px;
+}
+
+.formApply {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 40px;
 }
 
-.formApply input{
-    width:300px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    border:none;
+.formApply input {
+    width: 300px;
+    margin: 25px 0 25px;
+    border: none;
     border-radius: 5px;
-    font-size:14px ;
-    height:35px;
+    font-size: 14px;
+    height: 35px;
     font-family: Montserrat, serif;
-    letter-spacing:1px;
+    letter-spacing: 1px;
     font-weight: 500;
     box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.1);
     padding-left: 10px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
     box-sizing: border-box;
     background-color: #FFFFFF;
 }
 
-.formCtn p {
+.formCtn h3 {
     padding-top: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
 }
-.formApply button{
+
+.formApply button {
     margin-top: 20px;
     font-family: Rubik;
     font-weight: 900;
-    height:45px;
+    height: 45px;
     width: 170px;
     text-transform: uppercase;
     color: #FFFFFF;
     background-color: #3491C5;
     letter-spacing: 1px;
-    border:none;
+    border: none;
     border-radius: 60px;
     box-shadow: 0px 0px 45px 7px rgba(0, 0, 0, 0.15);
 
 }
-.formApply button:hover{
+
+.formApply button:hover {
     cursor: pointer;
     box-shadow: 0px 0px 45px 7px rgba(0, 151, 199, 0.5);
 }
 
-.addressCtn{
-    background-color:#0B1049;
+#address {
+    background-color: #0B1049;
+}
+
+/*ADDRESS*/
+.addressCtn {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
+    margin: 0 auto;
 }
-.address p{
+
+.address p {
     font-family: Rubik;
     font-weight: 700;
     color: #EAEFF3;
     text-align: left;
     font-size: 16px;
 }
-.addressCtn a{
+
+.addressCtn a {
     font-family: Rubik;
     font-weight: 700;
     color: #FFFFFF;
@@ -288,14 +325,248 @@ html{
     text-decoration: none;
     font-size: 14px;
 }
-.address{
-    padding-top: 20px;
-    padding-bottom: 30px;
+
+.address {
+    padding: 20px 0 30px;
 }
-.linkInst{
+#address  a{
+    font-size: 16px;
+}
+
+.linkInst {
     display: flex;
     align-items: center;
 }
-.linkInst a:hover{
+
+.linkInst a:hover {
     cursor: pointer;
 }
+@media screen and (max-width: 1200px) {
+    .navbar {
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .serviceItem img {
+        height: 170px;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+    .serviceItem img {
+        height: 300px;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 170px 10px 70px;
+        justify-content: space-around;
+        height: 140px
+    }
+
+    .about h3 {
+        font-size: 36px;
+    }
+
+    .aboutPhoto {
+        height: 250px;
+    }
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    .welcome p {
+        text-align: center;
+    }
+    .image-gallery{
+        width:80%;
+    }
+    .image-gallery-image{
+        width:20%;
+    }
+
+    .header{
+        justify-content: space-between;
+    }
+    .navbar{
+        display: none;
+    }
+
+    #divLogo{
+        display: block;
+        margin-left: 30px;
+    }
+    .aboutText h3{
+        font-size: 32px;
+    }
+    .formCtn{
+        width:370px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 670px){
+    .row-1{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .row-2{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    .about-1{
+        background-image: url("car_1.jpg");/*затемнить картинку*/
+        background-size: cover;
+    }
+    .about{
+        height:300px;
+    }
+
+    .aboutPhoto{
+        display: none;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .serviceItem img {
+        height: 250px;
+    }
+    .address{
+        margin-left: 20px;
+    }
+
+
+}
+@media screen and (max-width: 420px) {
+    .formCtn{
+        width: 80%
+    }
+    .formCtn h3{
+        width:80%;
+        margin:0 auto;
+        font-size: 16px;
+    }
+    .formApply input{
+        width: 220px !important;
+    }
+    .serviceItem img {
+        height: 200px;
+    }
+    .addressCtn{
+        flex-direction: column;
+
+    }
+    .address{
+        margin-left: 0;
+    }
+    .address p{
+        text-align: center;
+    }
+    .linkInst p{
+       display: none;
+    }
+    .linkInst a{
+        margin:0 auto;
+    }
+    #phone {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+
+}
+@media screen and (max-width: 300px){
+    .formApply input{
+        width:200px !important;
+    }
+}
+/*
+@media screen and (max-width: 600px){
+    .aboutText h3{
+        font-size: 25px;
+    }
+    .aboutPhoto{
+        height:200px;
+    }
+    .about{
+        height: 80px;
+    }
+    .row-1{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .row-2{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .image-gallery-image{
+        height:280px;
+    }
+    .image-gallery{
+        height:280px;
+        width: 350px;
+    }
+    .formCtn{
+        width: 350px;
+    }
+
+
+
+}
+@media screen and (max-width: 450px){
+
+    .addressCtn p{
+        font-size: 14px;
+        padding: 0 0 0 20px;
+    }
+
+    .serviceItem img{
+        height:240px;
+    }
+    .serviceItem{
+        padding: 0 20px;
+    }
+    #second{
+        width:300px;
+    }
+    #first{
+        width: 300px;
+    }
+
+}
+@media screen and (max-width: 380px) {
+    .formCtn {
+        width: 300px;
+    }
+
+    .formApply input {
+        width: 250px !important;
+    }
+
+    .formCtn h3 {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 350px) {
+
+
+}*/
+
+

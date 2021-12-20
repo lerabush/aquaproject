@@ -2,15 +2,18 @@ import React from "react";
 
 const AboutUs=()=>{
     return(
-        <div className="aboutCtn">
-            <div className="about">
-                <div className="aboutText">
-                    <p id="oneAbout">Качественная<br></br> мойка</p>
-                    <p style={{color:"#10A6E7"}}>В центре<br></br> Москвы</p>
+        <div id="about" className="aboutCtn">
+            <div className="about-1">
+                <div className="about container">
+                    <div className="aboutText">
+                        <h3 id="oneAbout">Качественная<br></br> мойка</h3>
+                        <h3 style={{color:"#10A6E7"}}>В центре<br></br> Москвы</h3>
+                    </div>
+                    <img className="aboutPhoto" src="../resources/cars/car_1.jpg"/>
                 </div>
-                <img className="aboutPhoto" src="../resources/cars/car_1.jpg"/>
             </div>
-            <div className="about-2">
+
+            <div className="about-2 container ">
                 <div className="row-1">
                     <div className="aboutItem">
                         <img className="aboutIcon" src="../resources/icons_service/icon-1.png"/>

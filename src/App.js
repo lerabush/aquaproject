@@ -7,9 +7,14 @@ import Photos from "./components/Photos";
 import Welcome from "./components/Welcome";
 import Form from "./components/Form";
 import Address from "./components/Address";
+import $ from "jquery";
+import SideBar from "./components/SideBar";
+
 
 function App() {
+
     return (
+
         <div className="App">
             <Header/>
             <AboutUs/>
